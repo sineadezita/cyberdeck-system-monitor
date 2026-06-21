@@ -16,6 +16,16 @@ operational data, and build something hands-on that goes beyond tutorials.
 | API Layer | FastAPI | Exposes metrics as JSON over HTTP |
 | Clients | CLI / browser | Reads the data |
 
+## Data Model
+
+| Column | Type | Description |
+| --- | --- | --- |
+| id | INTEGER (primary key) | Auto-incrementing row ID |
+| timestamp | TEXT | When the reading was taken |
+| cpu_percent | REAL | CPU usage at time of reading |
+| memory_percent | REAL | Memory usage at time of reading |
+| disk_percent | REAL | Disk usage at time of reading |
+
 ## Status
 
 - [x] Metrics collector (CPU, memory, disk)
@@ -33,9 +43,9 @@ Running on a Raspberry Pi Zero 2 W, as part of a cyberdeck I'm building.
 - Waveshare 5-inch HDMI LCD screen
 - Bluetooth keyboard
 - microSD card
-- GPIO header pins (ordered, neede to connect the PiSugar battery)
+- GPIO header pins (ordered, need to connect the PiSugar battery)
 
-Physical assembly - soldering the GPIO header, mounting the screen, and case/cable routint - still in progress.
+Physical assembly: soldering the GPIO header, mounting the screen, and case/cable routing - still in progress.
 
 
 ## Tech
