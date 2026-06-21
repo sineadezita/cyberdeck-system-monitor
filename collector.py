@@ -1,4 +1,5 @@
 import psutil
+from database import init_db, save_metrics
 
 def get_metrics():
     return {
@@ -8,4 +9,7 @@ def get_metrics():
     }
 
 if __name__ == "__main__":
-    print(get_metrics())
+    init_db()
+    data = get_metrics()
+    save_metrics(data)
+    print("Saved:", data)
