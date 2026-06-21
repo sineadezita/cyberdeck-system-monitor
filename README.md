@@ -33,6 +33,7 @@ operational data, and build something hands-on that goes beyond tutorials.
 - [ ] FastAPI /metrics endpoint
 - [ ] /health endpoint
 - [ ] Future: alerting, simple web dashboard
+- [ ] Future: extend to monitor multiple devices in the netwrok, not just this pi
 
 ## Hardware
 
