@@ -2,19 +2,25 @@
 
 A lightweight systems monitoring and observability tool, built on a Raspberry Pi.
 
+---
+
 ## Why
 
 I wanted to understand how real backend systems collect, store, and expose 
 operational data, and build something hands-on that goes beyond tutorials.
+
+---
 
 ## Architecture
 
 | Layer | Tool | Purpose |
 | --- | --- | --- |
 | Metrics Collector | Python, psutil | Reads live CPU, memory, and disk stats |
-| Storage Layer | SQLite | Saves readings with a timestamp |
+| Storage Layer | SQLite | Stores readings with a timestamp |
 | API Layer | FastAPI | Exposes metrics as JSON over HTTP |
 | Clients | CLI / browser | Reads the data |
+
+---
 
 ## Data Model
 
@@ -26,14 +32,20 @@ operational data, and build something hands-on that goes beyond tutorials.
 | memory_percent | REAL | Memory usage at time of reading |
 | disk_percent | REAL | Disk usage at time of reading |
 
+---
+
 ## Status
 
 - [x] Metrics collector (CPU, memory, disk)
-- [ ] SQLite persistence
-- [ ] FastAPI /metrics endpoint
-- [ ] /health endpoint
-- [ ] Future: alerting, simple web dashboard
-- [ ] Future: extend to monitor multiple devices in the netwrok, not just this pi
+- [x] SQLite persistence
+- [x] FastAPI /metrics endpoint
+- [x] /health endpoint
+- [ ] /metrics/history (in progress)
+- [ ] Future: alerting system
+- [ ] Future: simple web dashboard
+- [ ] Future: multi-device monitoring across network (not just this pi)
+
+---
 
 ## Hardware
 
@@ -48,7 +60,13 @@ Running on a Raspberry Pi Zero 2 W, as part of a cyberdeck I'm building.
 
 Physical assembly: soldering the GPIO header, mounting the screen, and case/cable routing - still in progress.
 
+---
 
-## Tech
+## Tech Stack
 
-Python, psutil, SQLite, FastAPI
+- Python
+- psutil
+- SQLite
+- FastAPI
+- Uvicorn
+- Raspberry Pi OS / Linux
