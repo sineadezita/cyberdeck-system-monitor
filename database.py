@@ -24,3 +24,14 @@ def save_metrics(data):
     """, (datetime.now().isoformat(), data["cpu_percent"], data["memory_percent"], data["disk_percent"]))
     conn.commit()
     conn.close()
+
+
+def get_history():
+    conn = sqlite3.connect("metrics.db")
+    cursor = conn.execute("SELECT timestamp, cpu_percent, memory_percent, disk_percent FROM metrics ORDER BY id DESC LIMIT 50")
+    rows = cursor.fetchall()
+    conn.close()
+    return [
+        {"timestamp": row[0], "cpu_percent": row[1], "memory_percent": row[2], "disk_percent": row[3]}
+        for row in rows
+    ]
