@@ -40,9 +40,10 @@ operational data, and build something hands-on that goes beyond tutorials.
 - [x] SQLite persistence
 - [x] FastAPI /metrics endpoint
 - [x] /health endpoint
-- [ ] /metrics/history (in progress)
-- [ ] Future: alerting system
-- [ ] Future: simple web dashboard
+- [x] /metrics/history
+- [x] Alerting system
+- [ ] Simple web dashboard (in progress)
+- [ ] Configure systemd service so the API runs automatically on boot
 - [ ] Future: multi-device monitoring across network (not just this pi)
 
 ---
