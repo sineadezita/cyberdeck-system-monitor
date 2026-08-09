@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberdeck Monitor</title>
+</head>
+<body>
+
+    <header>
+        <h1>Cyberdeck Monitor</h1>
+        <p id="timestamp">Last update: --</p>
+    </header>
+
+    <main>
+        <div class="metric">
+            <span class="label">CPU</span>
+            <span class="value" id="cpu">--</span>
+            <div class="bar"><div class="bar-fill" id="cpu-bar"></div></div>
+        </div>
+
+        <div class="metric">
+            <span class="label">Memory</span>
+            <span class="value" id="memory">--</span>
+            <div class="bar"><div class="bar-fill" id="memory-bar"></div></div>
+        </div>
+
+        <div class="metric">
+            <span class="label">Disk</span>
+            <span class="value" id="disk">--</span>
+            <div class="bar"><div class="bar-fill" id="disk-bar"></div></div>
+        </div>
+
+        <div id="alerts"></div>
+    </main>
+
+    <footer>
+        <p>Cyberdeck Monitor v1.0 | auto-refresh every 5s</p>
+    </footer>
+
+</body>
+</html>
